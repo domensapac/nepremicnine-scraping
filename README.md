@@ -16,6 +16,8 @@ App features
 ![Bun](https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) 
+![Nodemailer](https://img.shields.io/badge/Nodemailer-22B573?style=for-the-badge&logo=gmail&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge)
 
 ## Getting Started
 To get the project running, follow these steps.
@@ -39,7 +41,7 @@ Bun required
     ```sh
     SUPABASE_URL=
     SUPABASE_ANON_KEY=
-    NODEMAILER_PASS= GOOGLE password
+    NODEMAILER_PASS= //google 16 digit app password
     NODEMAILER_ADDRESS= 
     ```
 3.  Install bun packages 
