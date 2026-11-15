@@ -7,12 +7,13 @@ const stealth = require('puppeteer-extra-plugin-stealth')();
 chromium.use(stealth);
 const supabaseUrl = process.env.SUPABASE_URL!
 const supabaseKey = process.env.SUPABASE_ANON_KEY!
+const mailAddress = process.env.NODEMAILER_ADDRESS!
 const mailPass = process.env.NODEMAILER_PASS!
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'domen.sapac420@gmail.com',
+        user: mailAddress,
         pass: mailPass
     }
 });
@@ -156,8 +157,8 @@ async function sendMail(data : any[]){
     }
 
     const mailOptions = {
-        from: '"Nepremičnine.net" <domen.sapac420@gmail.com>',
-        to: 'domen.sapac10@gmail.com, potocnik.126@gmail.com',
+        from: '"Nepremičnine.net" <${mailAddress}>',
+        to: mailAddress,
         subject: 'Najdeni novi oglasi',
         html : htmlString
     }
@@ -165,4 +166,7 @@ async function sendMail(data : any[]){
     return transporter.sendMail(mailOptions);
 }
 
-scrapeData();
+while (true) {
+    await scrapeData();
+    await Bun.sleep(10 * 60 * 1000); 
+}

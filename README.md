@@ -1,15 +1,52 @@
-# web_scraping
+# NepremicnineScraping
 
-To install dependencies:
+**Runs only on local device, because of Cloudflare protection**
 
-```bash
-bun install
-```
+While you are away, you may miss a great deal. This scraper was supposed to fix that.
 
-To run:
+App features
+- Scraping Nepremicnine.net
+- Alerting via email
 
-```bash
-bun run index.ts
-```
+## Tech stack
+![Bun](https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) 
 
-This project was created using `bun init` in bun v1.3.13. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+## Getting Started
+To get the project running, follow these steps.
+
+### Prerequisites
+Bun required
+
+- macOS: `brew install bun`
+- Windows: `winget install Oven-sh.Bun`
+
+### Installation
+
+1.  Clone the repo
+    ```sh
+    git clone https://github.com/domensapac/nepremicnine-scraping.git
+    ```
+    ```sh
+    cd nepremicnine-scraping
+    ```
+2.  Create .env file and fill following
+    ```sh
+    SUPABASE_URL=
+    SUPABASE_ANON_KEY=
+    NODEMAILER_PASS= GOOGLE password
+    NODEMAILER_ADDRESS= 
+    ```
+3.  Install bun packages 
+    ```sh
+    bun install
+    ```
+4.  Install playwright
+    ```sh
+    bunx playwright install
+    ```
+5.  Run the scraper
+    ```sh
+    bun run index.ts
+    ```
