@@ -1,5 +1,9 @@
 # NepremicnineScraping
 
+<p float="left">
+  <img src="./docs/screenshot-mail.png" height="500" />
+</p>
+
 **Runs only on local device, because of Cloudflare protection**
 
 While you are away, you may miss a great deal. This scraper was supposed to fix that.
